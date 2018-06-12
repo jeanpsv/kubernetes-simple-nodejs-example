@@ -1,7 +1,7 @@
 import { check } from "k6"
 import http from "k6/http"
 
-const host = "http://35.192.183.117"
+const host = "http://..."
 
 export const options = {
   stages: [
