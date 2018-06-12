@@ -6,15 +6,15 @@ app.get("/health", (request, response, next) => {
   response.status(200)
 })
 
-app.get("/heavy", (request, response, next) => {
+app.get("/slow", (request, response, next) => {
   setTimeout(() => {
-    response.status(200).send("Heavy!!!\n")
+    response.status(200).send("Slow!!!\n")
   }, 1000)
 })
 
-app.get("/light", (request, response, next) => {
+app.get("/fast", (request, response, next) => {
   setTimeout(() => {
-    response.status(200).send("Light!!!\n")
+    response.status(200).send("Fast!!!\n")
   }, 200)
 })
 
