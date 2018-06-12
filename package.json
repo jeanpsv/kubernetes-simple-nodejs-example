@@ -1,0 +1,23 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Simple NodeJS application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeanpsv/kubernetes-simple-nodejs-example.git"
+  },
+  "author": "Jean Vasconcelos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeanpsv/kubernetes-simple-nodejs-example/issues"
+  },
+  "homepage": "https://github.com/jeanpsv/kubernetes-simple-nodejs-example#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
