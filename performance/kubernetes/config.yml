@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: k6-script
+  namespace: example
+data:
+  script.js: |
+    import { check } from "k6"
+    import http from "k6/http"
+
+    export const options = {
+      stages: [
+        { duration: "1m", target: 200 },
+        { duration: "3m", target: 1000 },
+        { duration: "1m", target: 400 },
+      ]
+    }
+
+    export default function () {
+      check(
+        http.get(`${__ENV.SERVICE_HOST}/fast`), {
+          "http 200": (res) => res.status === 200
+        }
+      )
+    }
